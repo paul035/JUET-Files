@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical"
+        android:padding="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to JUET files "
+            android:textColor="#fff"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/home"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/learnmore_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/buttonstylepink"
+                android:text="LEARN MORE"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/jointheclub_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/buttonstyle2"
+                android:text="JOIN THE CLUB"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/loginNameField"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_person_outline_black_24dp"
+            android:drawablePadding="10dp"
+            android:hint="EMAIL"
+            android:inputType="text|textEmailAddress"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/loginPasswordField"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
+            android:drawablePadding="10dp"
+            android:hint="PASSWORD"
+            android:inputType="textPassword"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:background="@drawable/buttonstylepink"
+            android:drawableRight="@drawable/ic_send_black_24dp"
+            android:text="LOGIN IN"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</LinearLayout>

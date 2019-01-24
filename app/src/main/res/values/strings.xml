@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">JUET files</string>
+    <string name="home">Jaypee University of Engineering and Technology was ranked in the 151–200 band among universities in India by the National Institutional Ranking Framework (NIRF) in 2018.</string>
+    <string name="signup">Sign Up with Social Platforms</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+
+    <string name="chats">Chats</string>
+
+
+    <string name="calls">Calls</string>
+    <string name="status">Status</string>
+
+
+    <string name="room_maintenance">Room Maintenance</string>
+    <string name="laundry">Laundry</string>
+    <string name="lend_and_borrow">Lend &amp; Borrow</string>
+    <string name="notice_board">Notice Board</string>
+    <string name="general_report">General Report</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

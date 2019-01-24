@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Hostel Services">
+        <menu>
+            <group android:checkableBehavior="none">
+
+                <item
+                    android:id="@+id/room"
+                    android:icon="@drawable/ic_room_black_24dp"
+                    android:title="Rooms"></item>
+
+                <item
+                    android:id="@+id/laundry"
+                    android:icon="@drawable/ic_local_laundry_service_black_24dp"
+                    android:title="Laundry"></item>
+
+                <item
+                    android:id="@+id/lendandborrow"
+                    android:icon="@drawable/ic_shopping_cart_black_24dp"
+                    android:title="Lend &amp; Borrow"></item>
+
+                <item
+                    android:id="@+id/noticeboard"
+                    android:icon="@drawable/ic_event_note_black_24dp"
+                    android:title="Notice"></item>
+
+                <item
+                    android:id="@+id/generalreport"
+                    android:icon="@drawable/ic_report_problem_black_24dp"
+                    android:title="Report"></item>
+            </group>
+        </menu>
+    </item>
+
+
+    <item
+        android:id="@+id/action_logout"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
+        android:title="Logout"
+         />
+
+    <item android:title="About us">
+        <menu>
+            <item
+                android:id="@+id/feedback"
+                android:icon="@drawable/ic_feedback_black_24dp"
+                android:title="Feedback" />
+            <item
+                android:id="@+id/developer"
+                android:icon="@drawable/ic_developer_board_black_24dp"
+                android:title="Developers"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+</menu>

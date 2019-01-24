@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoticeBoardFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NoticeBoardFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/green">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/noticeimg"
+                        android:layout_width="300dp"
+                        android:layout_height="300dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:background="@color/azur" />
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/lightgray"></View>
+
+                    <TextView
+                        android:id="@+id/noticedetail"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:background="@color/azur"
+                        android:hint="Details..."
+                        android:padding="10dp" />
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/lightgray"></View>
+
+                    <TextView
+                        android:id="@+id/noticedate"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:background="@color/azur"
+                        android:hint="Time..."
+                        android:padding="10dp" />
+
+                    <View
+                        android:layout_width="300dp"
+                        android:layout_height="1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/lightgray"></View>
+
+                    <TextView
+                        android:id="@+id/noticevenu"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:background="@color/azur"
+                        android:hint="Venu..."
+                        android:padding="10dp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </FrameLayout>
+</ScrollView>

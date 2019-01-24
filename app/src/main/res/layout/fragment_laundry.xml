@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+tools:context=".LaundryFragment">
+
+    <Button
+        android:id="@+id/washBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wash and Clean"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_margin="25dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/signup_button"
+        android:textColor="#fff"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="170dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/shirtCard"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            app:cardBackgroundColor="@color/azur"
+            android:layout_marginTop="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/shirt" />
+
+                <EditText
+                    android:id="@+id/noOfShirt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:hint="Item details" />
+
+                <Switch
+                    android:id="@+id/shirtSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/azur">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/pant"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/pant" />
+
+                <EditText
+                    android:id="@+id/noOfPant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:hint="Item details" />
+
+                <Switch
+                    android:id="@+id/pantSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/azur">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/tshirt" />
+
+                <EditText
+                    android:id="@+id/noOfTshirt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:hint="Item details" />
+
+                <Switch
+                    android:id="@+id/tshirtSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/azur">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/jeans" />
+
+                <EditText
+                    android:id="@+id/noOfJeans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:hint="Item details" />
+
+                <Switch
+                    android:id="@+id/jeansSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/azur">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/bernuda" />
+
+                <EditText
+                    android:id="@+id/noOfBernuda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:hint="Item details" />
+
+                <Switch
+                    android:id="@+id/bermudaSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            app:cardBackgroundColor="@color/azur"
+            android:layout_marginTop="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/lower" />
+
+                <EditText
+                    android:id="@+id/noOfLower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:hint="Item details" />
+
+                <Switch
+                    android:id="@+id/lowerSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            app:cardBackgroundColor="@color/azur"
+            android:layout_marginTop="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/towel" />
+
+                <EditText
+                    android:id="@+id/noOfTowel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:hint="Item details" />
+
+                <Switch
+                    android:id="@+id/towelSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
+

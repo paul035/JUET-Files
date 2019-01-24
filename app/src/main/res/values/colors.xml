@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //login screen colors
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#23283a</color>
+    <color name="pink">#fe104d</color>
+
+    //sign up screen colors
+    <color name="colorAccent">#FF4081</color>
+    <color name="azur">#f1f5f8</color>
+    <color name="white">#ffffff</color>
+    
+    //learn more screen colors
+    <color name="colorPrimary1">#FFC107</color>
+    <color name="colorPrimaryDark1">#FFA000</color>
+    <color name="backgroundcolor">#fcfcfc</color>
+    <color name="lightgray">#ededed</color>
+    <color name="deeppurple">#7c4dff</color>
+    <color name="yellow">#ffb300</color>
+    <color name="green">#00bfa5</color>
+
+    //
+
+    <color name="roomsservice">#00bfa5</color>
+    <color name="laundry">#FE104D</color>
+    <color name="lendandborrow">#F4511E</color>
+    <color name="noticeboard">#0091ea</color>
+    <color name="generalreport">#A1887F</color>
+</resources>

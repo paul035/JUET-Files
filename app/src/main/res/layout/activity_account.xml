@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary1"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary1"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="@android:color/black">
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabRoomMaintenance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room service"></android.support.design.widget.TabItem>
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabLaundry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Laundry Section"></android.support.design.widget.TabItem>
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabLendAndBorrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lend &amp; Borrow"></android.support.design.widget.TabItem>
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabNoticeBoard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notice Board"></android.support.design.widget.TabItem>
+
+            <android.support.design.widget.TabItem
+                android:id="@+id/tabGeneralReport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General Report"></android.support.design.widget.TabItem>
+
+        </android.support.design.widget.TabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        app:headerLayout="@layout/header"
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu">
+
+    </android.support.design.widget.NavigationView>
+</android.support.v4.widget.DrawerLayout>

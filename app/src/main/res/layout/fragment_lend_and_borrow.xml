@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LendAndBorrowFragment">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/shirtCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/azur">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/bookView"
+                android:layout_width="75dp"
+                android:layout_height="72dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/book" />
+
+            <CheckBox
+                android:id="@+id/bookBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="126dp"
+                android:layout_marginTop="50dp" />
+
+            <ImageView
+                android:id="@+id/ticketView"
+                android:layout_width="75dp"
+                android:layout_height="72dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="90dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ticket" />
+
+            <CheckBox
+                android:id="@+id/tickeBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="50dp" />
+
+            <ImageView
+                android:id="@+id/printerView"
+                android:layout_width="75dp"
+                android:layout_height="72dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="130dp"
+                android:src="@drawable/printer" />
+
+            <CheckBox
+                android:id="@+id/printerBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="126dp"
+                android:layout_marginTop="150dp" />
+
+            <ImageView
+                android:id="@+id/coolerView"
+                android:layout_width="75dp"
+                android:layout_height="72dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="90dp"
+                android:layout_marginTop="130dp"
+                android:src="@drawable/cooler" />
+
+            <CheckBox
+                android:id="@+id/coolerBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="150dp" />
+
+            <ImageView
+                android:id="@+id/calculatorView"
+                android:layout_width="75dp"
+                android:layout_height="72dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="230dp"
+                android:src="@drawable/calculator" />
+
+            <CheckBox
+                android:id="@+id/calculatorBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="126dp"
+                android:layout_marginTop="250dp" />
+
+            <ImageView
+                android:id="@+id/tieView"
+                android:layout_width="75dp"
+                android:layout_height="72dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="90dp"
+                android:layout_marginTop="230dp"
+                android:src="@drawable/tie" />
+
+            <CheckBox
+                android:id="@+id/tieBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="250dp" />
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="330dp"
+                android:ems="10"
+                android:hint="Item description"
+                android:inputType="textPersonName"/>
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="400dp"
+                android:ems="10"
+                android:hint="Phone No."
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/otherdetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="470dp"
+                android:ems="10"
+                android:hint="Other details : Year"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="520dp"
+                android:layout_centerHorizontal="true"
+                android:text="Submit"
+                android:background="@drawable/buttonstyle2"/>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>
+
+
