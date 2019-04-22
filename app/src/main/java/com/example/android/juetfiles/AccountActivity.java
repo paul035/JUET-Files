@@ -2,7 +2,9 @@ package com.example.android.juetfiles;
 
 import android.app.Activity;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -18,9 +20,15 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.AttributeSet;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -30,6 +38,12 @@ public class AccountActivity extends AppCompatActivity implements NavigationView
 
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
+    private TextView username, email;
+    private SharedPreferences sharedPreferences;
+    private boolean killThisActivity = false;
+
+    private static final String TAG = "AccountActivity";
+
 
     android.support.v7.widget.Toolbar toolbar;
     TabLayout tabLayout;
@@ -41,7 +55,6 @@ public class AccountActivity extends AppCompatActivity implements NavigationView
     TabItem tabLendAndBorrow;
     TabItem tabNoticeBoard;
     TabItem tabGeneralReport;
-
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
@@ -52,9 +65,13 @@ public class AccountActivity extends AppCompatActivity implements NavigationView
 
         //android.support.v7.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
+        
+        
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(getResources().getString(R.string.app_name));
         setSupportActionBar(toolbar);
+
+        sharedPreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         mToggle = new ActionBarDrawerToggle(AccountActivity.this, mDrawerLayout, R.string.open, R.string.close);
@@ -147,9 +164,17 @@ public class AccountActivity extends AppCompatActivity implements NavigationView
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (mToggle.onOptionsItemSelected(item)) {
+            username = findViewById(R.id.user_name);
+            email = findViewById(R.id.email_id);
+            username.setText(sharedPreferences.getString("name",""));
+            email.setText(sharedPreferences.getString("email",""));
             return true;
         }
         if (item.getItemId() == R.id.action_logout) {
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean("isLoggedIn",false);
+            Log.w(TAG, "onCreate: "+"sp: false");
+            editor.apply();
             logout();
         }
         return super.onOptionsItemSelected(item);
@@ -158,16 +183,12 @@ public class AccountActivity extends AppCompatActivity implements NavigationView
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.room) {
-            RoomMaintenanceFragment roomMaintenanceFragment = new RoomMaintenanceFragment();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.drawer, roomMaintenanceFragment).commit();
-            overridePendingTransition(R.anim.pull_in_right, R.anim.push_out_left);
-            mDrawerLayout.closeDrawer(GravityCompat.START);
-            return true;
-        }
 
         if (id == R.id.action_logout) {
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putBoolean("isLoggedIn",false);
+            Log.w(TAG, "onCreate: "+"sp: false");
+            editor.apply();
             logout();
         }
 
@@ -181,8 +202,34 @@ public class AccountActivity extends AppCompatActivity implements NavigationView
             startActivity(intent);
         }
 
+
+        setCorrespondingTab(item);
+        mDrawerLayout.closeDrawers();
         return false;
 
+    }
+
+    private void setCorrespondingTab(MenuItem item) {
+        if(item.getItemId() == R.id.room){
+            TabLayout.Tab tabItem = tabLayout.getTabAt(0);
+            tabItem.select();
+        }
+        if(item.getItemId() == R.id.laundry){
+            TabLayout.Tab tabItem = tabLayout.getTabAt(1);
+            tabItem.select();
+        }
+        if(item.getItemId() == R.id.lendandborrow){
+            TabLayout.Tab tabItem = tabLayout.getTabAt(2);
+            tabItem.select();
+        }
+        if(item.getItemId() == R.id.noticeboard){
+            TabLayout.Tab tabItem = tabLayout.getTabAt(3);
+            tabItem.select();
+        }
+        if(item.getItemId() == R.id.generalreport){
+            TabLayout.Tab tabItem = tabLayout.getTabAt(4);
+            tabItem.select();
+        }
     }
 
 
@@ -197,6 +244,18 @@ public class AccountActivity extends AppCompatActivity implements NavigationView
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(killThisActivity){
+            super.onBackPressed();
+            finish();
+        }
+//        Toast.makeText(this, "Kill is:"+killThisActivity, Toast.LENGTH_SHORT).show();
+        TabLayout.Tab item = tabLayout.getTabAt(0);
+        item.select();
+        killThisActivity = true;
     }
 
     private void logout() {

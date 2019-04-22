@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary1"
+            android:background="@color/roomsservice"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
@@ -26,7 +26,7 @@
             android:id="@+id/tablayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary1"
+            android:background="@color/roomsservice"
             app:tabSelectedTextColor="@android:color/white"
             app:tabTextColor="@android:color/black">
 
@@ -72,12 +72,12 @@
     </LinearLayout>
 
     <android.support.design.widget.NavigationView
-        app:headerLayout="@layout/header"
         android:id="@+id/navigation_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:menu="@menu/menu">
+        app:menu="@menu/menu"
+        app:headerLayout="@layout/header">
 
     </android.support.design.widget.NavigationView>
 </android.support.v4.widget.DrawerLayout>

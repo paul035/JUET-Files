@@ -10,22 +10,24 @@
     <ImageView
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@drawable/profile"/>
     
     <TextView
+        android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
+        android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
         android:hint="Username"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="3dp"/>
     
     <TextView
+        android:id="@+id/email_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="email"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/white"/>
+        android:layout_marginTop="3dp"
+        android:textColor="@color/colorPrimaryDark"/>
 
 </LinearLayout>
 

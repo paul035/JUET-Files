@@ -1,7 +1,9 @@
 package com.example.android.juetfiles;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,11 +32,14 @@ public class SignUpActivity extends AppCompatActivity {
     private ProgressDialog mProgress;
 
     private DatabaseReference mDatabase;
+    private SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sign_up);
+
+        sharedPreferences = getSharedPreferences("sp", Context.MODE_PRIVATE);
 
         mNameField = (EditText) findViewById(R.id.nameField);
         mEmailField = (EditText) findViewById(R.id.emailField);
@@ -62,6 +67,11 @@ public class SignUpActivity extends AppCompatActivity {
         final String email = mEmailField.getText().toString().trim();
         final String password = mPasswordField.getText().toString().trim();
 
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("name", name);
+        editor.putString("email",email);
+        editor.apply();
+
         mProgress.setMessage("Signing Up");
         mProgress.show();
 
@@ -80,6 +90,7 @@ public class SignUpActivity extends AppCompatActivity {
                        Intent mainIntent = new Intent(SignUpActivity.this, MainActivity.class);
                        mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                        startActivity(mainIntent);
+                       finish();
                    }
                 }
             });
